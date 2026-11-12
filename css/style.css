@@ -1,1 +1,9 @@
-/* Här skrivs all din CSS */
+:root{
+    --Assigned-color: rgba(40, 110, 170, 1)
+    --A-blue: hex(#2430AB)
+    --A-green: hex(#29AB7A)
+}
+
+body{
+    background: var(--Assigned-color);
+}
