@@ -1,9 +1,44 @@
 :root{
-    --Assigned-color: rgba(40, 110, 170, 1)
-    --A-blue: hex(#2430AB)
-    --A-green: hex(#29AB7A)
+    --Assigned-color: rgba(40, 110, 170, 1);
+    --A-blue: #2430AB;
+    --A-green: #29AB7A;
+    --Black: rgba(0, 0, 0, 0);
+    --White: rgba(255 255 255 1)
 }
 
 body{
     background: var(--Assigned-color);
+}
+
+#wrapper1{
+    display: grid;
+    height: 100vh;
+    width: 200vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    's1 s1 s1 s1 s1'
+    'cg cg cg cg cg'
+    'mn mn mn mn mn'
+    'ft ft ft ft ft'
+}
+
+#section_first{
+    grid-area: s1;
+    background: var(--Black);
+}
+
+#categories{
+    grid-area: cg;
+    background: var(--White);
+}
+
+#wrapper1 main{
+    grid-area: mn;
+    background: var(--Black);
+}
+
+#wrapper1 footer{
+    grid-area: ft;
+    background: var(--White);
 }
