@@ -2,26 +2,46 @@
     --Assigned-color: rgba(40, 110, 170, 1);
     --A-blue: #2430AB;
     --A-green: #29AB7A;
-    --Black: rgba(0, 0, 0, 0);
-    --White: rgba(255 255 255 1)
+    --Black: rgba(0, 0, 0);
+    --Nav-color: rgb(12, 12, 12);
+    --White: rgba(255, 255, 255);
 }
 
 body{
     background: var(--Assigned-color);
+    margin: 0;
 }
 
 #wrapper1{
     display: grid;
-    height: 100vh;
-    width: 200vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 200vh;
+    width: 100%;
+    margin-top: 7rem;
+    grid-template-columns: 1fr 70vw 1fr;
+    grid-template-rows: 50vh 40vh 100vh 10vh;
+    border: 0rem;
     grid-template-areas: 
-    's1 s1 s1 s1 s1'
-    'cg cg cg cg cg'
-    'mn mn mn mn mn'
-    'ft ft ft ft ft'
+    's1 s1 s1'
+    'el cg er'
+    'el mn er'
+    'el ft er'
 }
+.navbar{
+    width: 100%;
+    background: var(--Nav-color);
+    background: linear-gradient(var(--Nav-color)70%,rgba(0, 0, 0, 0));
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    transition: .4s;
+    top:0;
+    z-index: 1030;
+}
+
+
 
 #section_first{
     grid-area: s1;
@@ -41,4 +61,4 @@ body{
 #wrapper1 footer{
     grid-area: ft;
     background: var(--White);
-}
+}   
